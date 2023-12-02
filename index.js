@@ -204,11 +204,12 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
 function fenomenSil(arrToBeLookedAt, indxNb) {
   const newArr = arrToBeLookedAt.slice();
-  delete newArr[indxNb].profile;
+  newArr.splice(indxNb, 1);
 
   return newArr
 }
 fenomenSil(fenomenler, 0);
+fenomenSil(fenomenler, 2);
 
 /* Görev 6:
 Aşağıdakileri yapmak için fenomenEkle'i kullanın:
